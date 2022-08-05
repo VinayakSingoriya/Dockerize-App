@@ -1,0 +1,35 @@
+version: "3.7"
+
+
+
+services:
+
+  flaskapp:
+
+    build: ./flaskapp
+
+    container_name: flaskappContainer
+
+    restart: always
+
+    expose:
+
+      - 8000
+
+
+
+  nginx:
+
+    build: ./nginx
+
+    container_name: nginxContainer
+
+    depends_on: 
+
+      - flaskapp
+
+    restart: always
+
+    ports:
+
+      - "80:80"
