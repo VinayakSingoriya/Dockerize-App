@@ -7,18 +7,18 @@ app = Flask(__name__)
 # db = pymysql.connect(host='localhost',user='root',password='vinayak',database='todo',charset='utf8mb4',cursorclass=pymysql.cursors.DictCursor)
 
 # Database remote connection
-# db = pymysql.connect(
-#             host='todoapp-db.cmjf6xf1uo4z.us-east-1.rds.amazonaws.com',
-#             user='admin',
-#             port=3306,
-#             password='vinayak123',
-#             database='TodoApp',
-#             charset='utf8mb4',
-#             cursorclass=pymysql.cursors.DictCursor)
+db = pymysql.connect(
+            host='dockerdemords.cmjf6xf1uo4z.us-east-1.rds.amazonaws.com',
+            user='admin',
+            port=3306,
+            password='vinayak123',
+            database='TodoApp',
+            charset='utf8mb4',
+            cursorclass=pymysql.cursors.DictCursor)
 
 # Routing
 
-db = pymysql.connect(host='52.2.189.87',user='admin',password='vinayak123',database='TodoApp',charset='utf8mb4',cursorclass=pymysql.cursors.DictCursor)
+# db = pymysql.connect(host='52.2.189.87',user='admin',password='vinayak123',database='TodoApp',charset='utf8mb4',cursorclass=pymysql.cursors.DictCursor)
 
 #Handling error 404 and displaying relevant web page
 @app.errorhandler(404)
