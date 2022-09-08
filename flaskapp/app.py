@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 # Database remote connection
 db = pymysql.connect(
-            host='dockerdemords.cmjf6xf1uo4z.us-east-1.rds.amazonaws.com',
+            host='database-1.cmjf6xf1uo4z.us-east-1.rds.amazonaws.com',
             user='admin',
             port=3306,
             password='vinayak123',
